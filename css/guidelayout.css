@@ -1,0 +1,220 @@
+/* guidelayout.css */
+
+/* Pretendard WebFont */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-regular.woff') format('woff');
+  unicode-range: U+0000-FFFF;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-bold.woff') format('woff');
+  unicode-range: U+0000-FFFF;
+}
+
+:root {
+  --primary-color: #1D6363;
+  --primary-color-light: #4DA6A6;
+  --primary-color-softlight: #8BD4D4;
+  --primary-color-dark: #084646;
+  --txt-gray-100: #FBFBFD;
+  --txt-gray-200: #F0F1F6;
+  --txt-gray-300: #E4E5EA;
+  --txt-gray-400: #D1D0D6;
+  --txt-gray-500: #B3B4B9;
+  --txt-gray-600: #85848A;
+  --txt-gray-700: #6E6D73;
+  --txt-gray-800: #2F2E33;
+  --txt-gray-900: #1C1C1E;
+  --color-error: #ff4d4f;
+  --color-error-light: #fff0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  display: flex;
+  height: 100vh;
+  color: #333;
+  background: #fff;
+}
+
+/* Sidebar */
+aside {
+  width: 250px;
+  background: #f8f9fa;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+aside h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+aside nav ul {
+  list-style: none;
+}
+
+aside nav li {
+  margin: 0;
+  padding: 0.7em 1.2em;
+}
+
+aside nav li:last-child {
+  border-bottom: none;
+}
+
+aside nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+aside nav a:hover {
+  color: var(--primary-color);
+}
+
+aside .nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.component {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.bg {
+  background-color: var(--primary-color);
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.preview-column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.code {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+.code+.preview {
+  margin-top: 3rem;
+}
+
+/* 반응형: 모바일 대응 */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside {
+    width: 100%;
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #f8f9fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  aside nav ul {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  main {
+    padding: 1rem;
+    margin-top: 80px;
+    /* aside 높이만큼 아래로 */
+  }
+
+  .component {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .preview-column {
+    align-items: stretch !important;
+  }
+
+  .color-box {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0.5em;
+  }
+
+
+  .code {
+    font-size: 0.8rem;
+    padding: 0.7rem;
+  }
+}
