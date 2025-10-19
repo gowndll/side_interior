@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간편견적</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/page.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="logo"><h1><a class="logo__a" href="#">내일의 집</a></h1></div>
+      <div class="menu_show">
+        <ul>
+          <li class="menu_show__li">
+            <button id="btn_menu_show">
+              <span class="sound_only">메뉴열기</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path></svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__li"><a href="#">포트폴리오</a></li>
+          <li class="nav__li"><a href="#"><b>간편견적 받기</b></a></li>
+        </ul>
+        <div class="menu_hide">
+          <button id="btn_menu_hide">
+            <span class="sound_only">메뉴닫기</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div id="container">
+    <main class="estimate__main">
+      <section class="estimate">
+        <div class="estimate__left">
+          <div class="swiper estimate__swiper">
+            <div class="swiper-wrapper estimate__swiper__wrapper">
+              <div class="swiper-slide">
+                <section class="estimate__slide">
+                  <h3 class="estimate__slide__title">이건 첫번째 레쓴</h3>
+                  <p class="estimate__slide__desc">좋은건 너만 알기</p>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="estimate__slide">
+                  <h3 class="estimate__slide__title">이제 두번쨰 레쓴</h3>
+                  <p class="estimate__slide__desc">슬픔도 너만 갖기</p>
+                </section>
+              </div>
+            </div>
+            <div class="swiper-pagination estimate__swiper__pagination"></div>
+          </div>
+        </div>
+        <div class="estimate__right">
+          <div class="estimate__progress">
+            <span class="sound_only">6단계 중 1단계</span>
+            <div class="estimate__progress__circle active"></div>
+            <div class="estimate__progress__line"></div>
+            <div class="estimate__progress__circle"></div>
+            <div class="estimate__progress__line"></div>
+            <div class="estimate__progress__circle"></div>
+            <div class="estimate__progress__line"></div>
+            <div class="estimate__progress__circle"></div>
+            <div class="estimate__progress__line"></div>
+            <div class="estimate__progress__circle"></div>
+            <div class="estimate__progress__line"></div>
+            <div class="estimate__progress__circle"></div>
+          </div>
+          <div class="estimate__title">
+            <h2>시공할 공간의 형태를 선택해주세요.</h2>
+          </div>
+
+          <!-- 간편견적 입력 -->
+          <form class="estimate__form" action="#" method="post" style="display: none;">  
+            <!-- 첫번째 입력 -->
+            <fieldset style="display: none">
+              <legend class="sound_only">간편견적 형태 입력폼</legend>
+              <div class="estimate__form__group">
+                <label class="radio">
+                  <input type="radio" name="estimate01"/>
+                  <span class="radiomark"></span>
+                  <span>아파트</span>
+                  <span class="tooltip-container">
+                    <span class="icon primary">
+                      <!-- 아이콘: 툴팁 -->
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1Z" fill="currentColor"/>
+                        <path d="M8.98719 4C9.89147 4 10.6175 4.26063 11.1653 4.78189C11.7218 5.29401 12 6.00274 12 6.90809C12 7.8043 11.7261 8.49017 11.1783 8.96571C10.6305 9.4321 9.90451 9.66529 9.00023 9.66529L8.94806 10.7215H7.34384L7.27863 8.38958H7.86554C8.622 8.38958 9.20456 8.28441 9.61323 8.07407C10.0219 7.86374 10.2262 7.47965 10.2262 6.92181C10.2262 6.51943 10.1132 6.19936 9.88712 5.96159C9.66975 5.72382 9.36977 5.60494 8.98719 5.60494C8.58722 5.60494 8.2742 5.71925 8.04813 5.94787C7.83076 6.1765 7.72207 6.492 7.72207 6.89438H6.00047C5.99177 6.33653 6.10481 5.83813 6.33957 5.39918C6.57433 4.96022 6.91779 4.61728 7.36992 4.37037C7.83076 4.12346 8.36985 4 8.98719 4ZM8.13943 14C7.80902 14 7.53513 13.8948 7.31775 13.6845C7.10908 13.465 7.00474 13.1952 7.00474 12.8752C7.00474 12.5551 7.10908 12.2899 7.31775 12.0796C7.53513 11.8601 7.80902 11.7503 8.13943 11.7503C8.46114 11.7503 8.72634 11.8601 8.93502 12.0796C9.1437 12.2899 9.24804 12.5551 9.24804 12.8752C9.24804 13.1952 9.1437 13.465 8.93502 13.6845C8.72634 13.8948 8.46114 14 8.13943 14Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="tooltip">규격화된 구조와 마감재가 많아 비교적 시공이 용이해요.</span>
+                  </span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="estimate01"/>
+                  <span class="radiomark"></span>
+                  <span>오피스텔</span>
+                  <span class="tooltip-container">
+                    <span class="icon primary">
+                      <!-- 아이콘: 툴팁 -->
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1Z" fill="currentColor"/>
+                        <path d="M8.98719 4C9.89147 4 10.6175 4.26063 11.1653 4.78189C11.7218 5.29401 12 6.00274 12 6.90809C12 7.8043 11.7261 8.49017 11.1783 8.96571C10.6305 9.4321 9.90451 9.66529 9.00023 9.66529L8.94806 10.7215H7.34384L7.27863 8.38958H7.86554C8.622 8.38958 9.20456 8.28441 9.61323 8.07407C10.0219 7.86374 10.2262 7.47965 10.2262 6.92181C10.2262 6.51943 10.1132 6.19936 9.88712 5.96159C9.66975 5.72382 9.36977 5.60494 8.98719 5.60494C8.58722 5.60494 8.2742 5.71925 8.04813 5.94787C7.83076 6.1765 7.72207 6.492 7.72207 6.89438H6.00047C5.99177 6.33653 6.10481 5.83813 6.33957 5.39918C6.57433 4.96022 6.91779 4.61728 7.36992 4.37037C7.83076 4.12346 8.36985 4 8.98719 4ZM8.13943 14C7.80902 14 7.53513 13.8948 7.31775 13.6845C7.10908 13.465 7.00474 13.1952 7.00474 12.8752C7.00474 12.5551 7.10908 12.2899 7.31775 12.0796C7.53513 11.8601 7.80902 11.7503 8.13943 11.7503C8.46114 11.7503 8.72634 11.8601 8.93502 12.0796C9.1437 12.2899 9.24804 12.5551 9.24804 12.8752C9.24804 13.1952 9.1437 13.465 8.93502 13.6845C8.72634 13.8948 8.46114 14 8.13943 14Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="tooltip">주거와 업무 공간이 혼합된 형태로, 층고가 낮고 구조가 단순한 경우가 많아 비용이 상대적으로 합리적이에요.</span>
+                  </span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="estimate01"/>
+                  <span class="radiomark"></span>
+                  <span>빌라</span>
+                  <span class="tooltip-container">
+                    <span class="icon primary">
+                      <!-- 아이콘: 툴팁 -->
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1Z" fill="currentColor"/>
+                        <path d="M8.98719 4C9.89147 4 10.6175 4.26063 11.1653 4.78189C11.7218 5.29401 12 6.00274 12 6.90809C12 7.8043 11.7261 8.49017 11.1783 8.96571C10.6305 9.4321 9.90451 9.66529 9.00023 9.66529L8.94806 10.7215H7.34384L7.27863 8.38958H7.86554C8.622 8.38958 9.20456 8.28441 9.61323 8.07407C10.0219 7.86374 10.2262 7.47965 10.2262 6.92181C10.2262 6.51943 10.1132 6.19936 9.88712 5.96159C9.66975 5.72382 9.36977 5.60494 8.98719 5.60494C8.58722 5.60494 8.2742 5.71925 8.04813 5.94787C7.83076 6.1765 7.72207 6.492 7.72207 6.89438H6.00047C5.99177 6.33653 6.10481 5.83813 6.33957 5.39918C6.57433 4.96022 6.91779 4.61728 7.36992 4.37037C7.83076 4.12346 8.36985 4 8.98719 4ZM8.13943 14C7.80902 14 7.53513 13.8948 7.31775 13.6845C7.10908 13.465 7.00474 13.1952 7.00474 12.8752C7.00474 12.5551 7.10908 12.2899 7.31775 12.0796C7.53513 11.8601 7.80902 11.7503 8.13943 11.7503C8.46114 11.7503 8.72634 11.8601 8.93502 12.0796C9.1437 12.2899 9.24804 12.5551 9.24804 12.8752C9.24804 13.1952 9.1437 13.465 8.93502 13.6845C8.72634 13.8948 8.46114 14 8.13943 14Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="tooltip">소규모 주택, 구조가 다양해 현장에 따라 자재 및 시공 방식이 달라질 수 있어요.</span>
+                  </span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="estimate01"/>
+                  <span class="radiomark"></span>
+                  <span>단독주택</span>
+                  <span class="tooltip-container">
+                    <span class="icon primary">
+                      <!-- 아이콘: 툴팁 -->
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1Z" fill="currentColor"/>
+                        <path d="M8.98719 4C9.89147 4 10.6175 4.26063 11.1653 4.78189C11.7218 5.29401 12 6.00274 12 6.90809C12 7.8043 11.7261 8.49017 11.1783 8.96571C10.6305 9.4321 9.90451 9.66529 9.00023 9.66529L8.94806 10.7215H7.34384L7.27863 8.38958H7.86554C8.622 8.38958 9.20456 8.28441 9.61323 8.07407C10.0219 7.86374 10.2262 7.47965 10.2262 6.92181C10.2262 6.51943 10.1132 6.19936 9.88712 5.96159C9.66975 5.72382 9.36977 5.60494 8.98719 5.60494C8.58722 5.60494 8.2742 5.71925 8.04813 5.94787C7.83076 6.1765 7.72207 6.492 7.72207 6.89438H6.00047C5.99177 6.33653 6.10481 5.83813 6.33957 5.39918C6.57433 4.96022 6.91779 4.61728 7.36992 4.37037C7.83076 4.12346 8.36985 4 8.98719 4ZM8.13943 14C7.80902 14 7.53513 13.8948 7.31775 13.6845C7.10908 13.465 7.00474 13.1952 7.00474 12.8752C7.00474 12.5551 7.10908 12.2899 7.31775 12.0796C7.53513 11.8601 7.80902 11.7503 8.13943 11.7503C8.46114 11.7503 8.72634 11.8601 8.93502 12.0796C9.1437 12.2899 9.24804 12.5551 9.24804 12.8752C9.24804 13.1952 9.1437 13.465 8.93502 13.6845C8.72634 13.8948 8.46114 14 8.13943 14Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="tooltip">개별 건물로, 공간 크기와 구조가 자유로운 만큼 시공 범위와 비용이 다양하게 산출돼요.</span>
+                  </span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="estimate01"/>
+                  <span class="radiomark"></span>
+                  <span>다세대주택</span>
+                  <span class="tooltip-container">
+                    <span class="icon primary">
+                      <!-- 아이콘: 툴팁 -->
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1Z" fill="currentColor"/>
+                        <path d="M8.98719 4C9.89147 4 10.6175 4.26063 11.1653 4.78189C11.7218 5.29401 12 6.00274 12 6.90809C12 7.8043 11.7261 8.49017 11.1783 8.96571C10.6305 9.4321 9.90451 9.66529 9.00023 9.66529L8.94806 10.7215H7.34384L7.27863 8.38958H7.86554C8.622 8.38958 9.20456 8.28441 9.61323 8.07407C10.0219 7.86374 10.2262 7.47965 10.2262 6.92181C10.2262 6.51943 10.1132 6.19936 9.88712 5.96159C9.66975 5.72382 9.36977 5.60494 8.98719 5.60494C8.58722 5.60494 8.2742 5.71925 8.04813 5.94787C7.83076 6.1765 7.72207 6.492 7.72207 6.89438H6.00047C5.99177 6.33653 6.10481 5.83813 6.33957 5.39918C6.57433 4.96022 6.91779 4.61728 7.36992 4.37037C7.83076 4.12346 8.36985 4 8.98719 4ZM8.13943 14C7.80902 14 7.53513 13.8948 7.31775 13.6845C7.10908 13.465 7.00474 13.1952 7.00474 12.8752C7.00474 12.5551 7.10908 12.2899 7.31775 12.0796C7.53513 11.8601 7.80902 11.7503 8.13943 11.7503C8.46114 11.7503 8.72634 11.8601 8.93502 12.0796C9.1437 12.2899 9.24804 12.5551 9.24804 12.8752C9.24804 13.1952 9.1437 13.465 8.93502 13.6845C8.72634 13.8948 8.46114 14 8.13943 14Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="tooltip">여러 세대가 모여있는 형태로, 공동 주거 공간의 특성을 고려한 시공 방식이 필요해요.</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+            <!-- 첫번째 입력 -->
+            <!-- 두번째 입력 -->
+            <fieldset style="display: none">
+              <legend class="sound_only">시공장르 입력폼</legend>
+              <div class="estimate__form__group">
+              </div>
+            </fieldset>
+            <!-- 두번째 입력 -->
+            <!-- 날짜 입력 -->
+            <fieldset style="display: none">
+              <legend class="sound_only">시공 날짜 입력폼</legend>
+              <div class="estimate__form__group date-inputs">
+                <label class="input-date-group">
+                  <span class="input-date-label sound_only">시작일 선택</span>
+                  <div class="input-date-wrap">
+                    <input type="date" class="input-date" min="2025-10-20"/>
+                    <span class="input-error-message">날짜를 선택해주세요.</span>
+                  </div>
+                </label>
+                <span>~</span>
+                <label class="input-date-group">
+                  <span class="input-date-label sound_only">종료일 선택</span>
+                  <div class="input-date-wrap">
+                    <input type="date" class="input-date" min="2025-10-23"/>
+                    <span class="input-error-message">날짜를 선택해주세요.</span>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+            <!-- 날짜 입력 -->
+          </form>
+          <div class="estimate__btnwrap" style="display: none;">
+            <button class="btn btn-gray-txt btn-md estimate__prev">
+              <span class="icon">
+                <!-- 아이콘: 화살표(왼쪽) -->
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L6 9L12 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              이전으로
+            </button>
+            <button class="btn btn-primary-txt btn-md estimate__next">
+              다음으로
+              <span class="icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 15L12 9L6 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <!-- 간편견적 입력 -->
+          
+          <!-- 간편견적 결과 -->
+          <div class="estimate_result">
+            <div class="ui-row-table-wrap">
+               <table class="ui-row-table">
+                <tbody>
+                  <tr>
+                    <th>종류</th>
+                    <td>아파트</td>
+                  </tr>
+                  <tr>
+                    <th>장르</th>
+                    <td>도배: 합지 / 바닥재: 마루</td>
+                  </tr>
+                  <tr>
+                    <th>평수</th>
+                    <td>10평 이하 (~33m²)</td>
+                  </tr>
+                  <tr>
+                    <th>날짜</th>
+                    <td>2025년 00월 00일 ~ 2025년 00월 00일</td>
+                  </tr>
+                  <tr>
+                    <th>위치</th>
+                    <td>서울특별시 마포구 상암동 000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="estimate__btnwrap estimate-result">
+            <button class="btn btn-gray-line btn-lg">간편견적 종료하기</button>
+            <button class="btn btn-primary-dark btn-lg">간편견적 결과 저장하기</button>
+          </div>
+          <!-- 간편견적 결과 -->
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="../js/common.js"></script>
+
+  <script>
+    const estimateSwiper = new Swiper('.estimate__swiper', {
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      // If we need pagination
+      pagination: {
+        el: '.estimate__swiper .swiper-pagination',
+        clickable: true,
+      },
+
+    });
+  </script>
+</body>
+</html>

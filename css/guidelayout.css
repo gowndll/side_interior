@@ -1,55 +1,7 @@
-/* guidelayout.css */
-
-/* Pretendard WebFont */
-@font-face {
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-regular.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-regular.woff') format('woff');
-  unicode-range: U+0000-FFFF;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 700;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-bold.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-bold.woff') format('woff');
-  unicode-range: U+0000-FFFF;
-}
-
-:root {
-  --primary-color: #1D6363;
-  --primary-color-light: #4DA6A6;
-  --primary-color-softlight: #8BD4D4;
-  --primary-color-dark: #084646;
-  --txt-gray-100: #FBFBFD;
-  --txt-gray-200: #F0F1F6;
-  --txt-gray-300: #E4E5EA;
-  --txt-gray-400: #D1D0D6;
-  --txt-gray-500: #B3B4B9;
-  --txt-gray-600: #85848A;
-  --txt-gray-700: #6E6D73;
-  --txt-gray-800: #2F2E33;
-  --txt-gray-900: #1C1C1E;
-  --color-error: #ff4d4f;
-  --color-error-light: #fff0f0;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-}
-
 body {
-  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   display: flex;
   height: 100vh;
-  color: #333;
-  background: #fff;
+  overflow: hidden;
 }
 
 /* Sidebar */
@@ -74,7 +26,7 @@ aside nav ul {
 
 aside nav li {
   margin: 0;
-  padding: 0.7em 1.2em;
+  padding: 0.7em 0;
 }
 
 aside nav li:last-child {

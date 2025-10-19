@@ -1,0 +1,204 @@
+
+/*
+  간편견적
+*/
+
+.estimate__main {
+  background: center / cover no-repeat linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/estimate-bg-01.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.estimate {
+  width: 100%;
+  height: 80vh;
+  max-width: 1460px;
+  max-height: 760px;
+  display: flex;
+}
+
+.estimate__left {
+  flex:1;
+  max-width: 50%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.estimate__swiper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  --swiper-pagination-color: var(--txt-gray-100);
+  --swiper-pagination-bullet-width: 1rem;
+  --swiper-pagination-bullet-height: 1rem;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+}
+
+.estimate__swiper__pagination {
+  position: static;
+  grid-row: 1/2;
+  text-align: right;
+  padding: 0 20px;
+}
+.estimate__swiper__wrapper {
+  grid-row: 2/3;
+}
+
+.estimate__slide {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  padding: 20px;
+}
+
+.estimate__slide__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--txt-gray-100);
+}
+.estimate__slide__desc {
+  font-size: 1.5rem;
+  color: var(--txt-gray-200);
+  font-weight: 400;
+}
+
+.estimate__right {
+  max-width: 50%;
+  flex:1;
+  display: grid;
+  grid-template-rows: 4.25rem 2.8rem 1fr;
+  grid-template-columns: 100%;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 1.25rem;
+  padding: 3.75rem;
+}
+
+.estimate__progress {
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem 0;
+}
+
+.estimate__progress__circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: var(--txt-gray-500);
+}
+.estimate__progress__line {
+  height: 1px;
+  flex: 1;
+  background-color: var(--txt-gray-500);
+}
+.estimate__progress__circle.active,
+.estimate__progress__line.active {
+  background-color: var(--primary-color);
+}
+
+.estimate__title {
+  grid-row: 1/2;
+  display: flex;
+  align-items: flex-end;
+}
+.estimate__form,
+.estimate_result {
+  grid-row: 3/4;
+  max-height: 100%;
+}
+.estimate__form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.estimate__form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 20px 0;
+}
+
+.estimate__form__group.date-inputs {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estimate__form__group.date-inputs .input-date-group {
+  flex:1;
+}
+.estimate__form__group.date-inputs .input-date-wrap,
+.estimate__form__group.date-inputs .input-date-wrap input {
+  width: 100%;
+}
+
+.estimate_result {
+  padding: 20px 0;
+}
+
+.estimate__btnwrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estimate__prev,
+.estimate__next {
+  padding: 0;
+  width: auto;
+}
+
+.estimate__prev:hover {
+  background-color: transparent;
+  color: var(--txt-gray-500);
+}
+
+.estimate__next:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.estimate__btnwrap.estimate-result {
+  gap: 0.875rem;
+}
+
+.estimate__btnwrap.estimate-result .btn {
+  width:100%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .estimate {
+    max-width: calc(100% - 40px);
+  }
+
+  .estimate__left {
+    display: none;
+  }
+
+  .estimate__right {
+    max-width: 100%;
+    padding: 3.75rem 1.875rem 2rem;
+  }
+
+  .estimate__btnwrap {
+    flex-direction: column;
+  }
+
+  .estimate__btnwrap.estimate-result {
+    gap: 0.4rem;
+  }
+}
+
+/*
+  간편견적
+*/
