@@ -175,6 +175,22 @@
   width:100%;
 }
 
+.result__amount {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.875rem 0;
+  font-size: 1.3rem;
+  font-family: 'Gmarket Sans', sans-serif;
+}
+
+.result__amount__label {
+  margin-right: 4px;
+}
+.result__amount__price b {
+  color: var(--primary-color-dark);
+  font-weight: 900;
+}
+
 @media screen and (max-width: 768px) {
 
   .estimate {
