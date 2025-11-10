@@ -13,4 +13,4 @@ function initTooltip() {
       elem.classList.add('tooltip--top');
     }
   })
-}
+}``
