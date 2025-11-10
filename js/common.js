@@ -1,33 +1,16 @@
-// function calcTooltip() {
-//   const windowWidth = window.innerWidth;
-//   const toolTips = document.querySelectorAll('.tooltip-container');
-//   toolTips.forEach((toolTip) => {
-//     const tooltipTxt = toolTip.querySelector('.tooltip');
-//     const tooltipLeft = tooltipTxt.getBoundingClientRect().left;
-//     const tooltipRight = tooltipTxt.getBoundingClientRect().right;
-//       // console.log('tooltipLeft:'+tooltipLeft)
-//       // console.log('tooltipRight:'+tooltipRight)
-//       // console.log('windowWidth:'+windowWidth)
+document.addEventListener('DOMContentLoaded', () => {
+  initTooltip();
+});
 
-//     if(tooltipLeft < 0) {
-//       tooltipTxt.style.whiteSpace = 'normal';
-//       tooltipTxt.style.width = tooltipRight+tooltipLeft-20+'px';
-//     } else {
-//       tooltipTxt.style.whiteSpace = 'norwrap';
-//     }
-
-//     if(tooltipRight > windowWidth) {
-//       tooltipTxt.style.whiteSpace = 'normal';
-//       tooltipTxt.style.width = tooltipRight-tooltipLeft-(tooltipRight-windowWidth)-20+'px';
-//     } else {
-//       tooltipTxt.style.whiteSpace = 'norwrap';
-//     }
-//   });
-// }
-
-// calcTooltip();
-
-
-// window.addEventListener('resize', () => {
-//   calcTooltip();
-// });
+function initTooltip() {
+  const tooltipElems = document.querySelectorAll('.tooltip-container');
+  const windowHeight = window.innerHeight;
+  tooltipElems.forEach(elem => {
+    const top = elem.getBoundingClientRect().top;
+    if(top < windowHeight / 2) {
+      elem.classList.add('tooltip--bottom');
+    } else {
+      elem.classList.add('tooltip--top');
+    }
+  })
+}

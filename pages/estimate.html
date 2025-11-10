@@ -173,7 +173,12 @@
                   <label for="estimate0201">도배</label>
                   <div class="estimate_toggle_box">
                     <label class="radio">
-                      <input type="radio" name="sample-radio" checked />
+                      <input type="radio" name="sample-radio01" checked />
+                      <span class="radiomark"></span>
+                      선택안함
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="sample-radio01" />
                       <span class="radiomark"></span>
                       합지
                       <span class="tooltip-container">
@@ -187,7 +192,7 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input type="radio" name="sample-radio" />
+                      <input type="radio" name="sample-radio01" />
                       <span class="radiomark"></span>
                       실크
                       <span class="tooltip-container">
@@ -208,7 +213,12 @@
                   <label for="estimate0202">바닥재</label>
                   <div class="estimate_toggle_box">
                     <label class="radio">
-                      <input type="radio" name="sample-radio" checked />
+                      <input type="radio" name="sample-radio02" checked />
+                      <span class="radiomark"></span>
+                      선택안함
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="sample-radio02" />
                       <span class="radiomark"></span>
                       마루
                       <span class="tooltip-container">
@@ -222,7 +232,7 @@
                       </span>
                     </label>
                     <label class="radio">
-                      <input type="radio" name="sample-radio" />
+                      <input type="radio" name="sample-radio02" />
                       <span class="radiomark"></span>
                       장판
                       <span class="tooltip-container">
@@ -264,7 +274,7 @@
             </fieldset>
             <!-- 날짜 입력 -->
           </form>
-          <div class="estimate__btnwrap" style="display: none;">
+          <div class="estimate__btnwrap" >
             <button class="btn btn-gray-txt btn-md estimate__prev">
               <span class="icon">
                 <!-- 아이콘: 화살표(왼쪽) -->
@@ -333,7 +343,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="../js/common.js"></script>
+  <script src="../js/common.js" defer></script>
 
   <script>
     const estimateSwiper = new Swiper('.estimate__swiper', {

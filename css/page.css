@@ -112,6 +112,16 @@
 .estimate_result {
   grid-row: 3/4;
   max-height: 100%;
+  overflow-y: auto;
+}
+.estimate__form::-webkit-scrollbar,
+.estimate_result::-webkit-scrollbar {
+  width: 2px;
+}
+.estimate__form::-webkit-scrollbar-thumb,
+.estimate_result::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: var(--txt-gray-300);
 }
 .estimate__form fieldset {
   border: 0;
@@ -123,7 +133,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  padding: 20px 0;
 }
 
 .estimate__form__group.date-inputs {
@@ -138,6 +147,50 @@
 .estimate__form__group.date-inputs .input-date-wrap,
 .estimate__form__group.date-inputs .input-date-wrap input {
   width: 100%;
+}
+
+.estimate_toggle > label {
+  display: block;
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  font-weight: 700;
+  color: var(--txt-gray-100);
+  border-radius: 8px;
+}
+
+.estimate_toggle > .estimate_toggle_box {
+  display: block;
+  padding: 0 0 20px 0;
+}
+
+.estimate_toggle_box > label {
+  position: relative;
+  padding: 8px 0 0 20px;
+}
+
+.estimate_toggle_box > label::before {
+  content:""; 
+  display: block;
+  position: absolute;
+  left: 10px;
+  top:19px;
+  width: 10px;
+  height: 2px;
+  background-color: var(--txt-gray-400);
+}
+
+.estimate_toggle_box > label::after {
+  content:""; 
+  display: block;
+  position: absolute;
+  left: 10px;
+  top:0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--txt-gray-400);
+}
+.estimate_toggle_box > label:last-child::after {
+  height: 19px;
 }
 
 .estimate_result {
@@ -206,12 +259,9 @@
     padding: 3.75rem 1.875rem 2rem;
   }
 
-  .estimate__btnwrap {
-    flex-direction: column;
-  }
-
   .estimate__btnwrap.estimate-result {
-    gap: 0.4rem;
+    flex-direction: column;
+    gap: 0.2rem;
   }
 }
 

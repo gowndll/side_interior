@@ -546,16 +546,12 @@ button {
 
 .tooltip {
   position: absolute;
-  bottom: 150%;              /* 기본적으로 위쪽에 위치 */
-  left: 0;
   transform: translateX(-1rem);
-  right:0;
   background: #333;
   color: #fff;
   padding: 10px 20px;
   font-size: 0.875rem;
   line-height: 140%;
-  /* white-space: nowrap; */
   word-break: keep-all;
   opacity: 0;
   pointer-events: none;
@@ -564,6 +560,19 @@ button {
   border-radius: 20px;
   color: #fff;
   background: var(--primary-color-light);
+}
+
+.tooltip-container.tooltip--top .tooltip {
+  top: auto;
+  bottom: 150%;
+  left: 0;
+  right:0;
+}
+.tooltip-container.tooltip--bottom .tooltip {
+  top: 150%;
+  bottom: auto;
+  left: 0;
+  right:0;
 }
 
 .tooltip-container:hover .tooltip,
@@ -575,11 +584,21 @@ button {
 .tooltip::after {
   content: "";
   position: absolute;
+}
+
+.tooltip-container.tooltip--top .tooltip::after {
   top: calc(100% - 1px);
   left: calc(1rem + 6px);
   border-width: 7px;
   border-style: solid;
   border-color: var(--primary-color-light) transparent transparent transparent;
+}
+.tooltip-container.tooltip--bottom .tooltip::after {
+  bottom: calc(100% - 1px);
+  left: calc(1rem + 6px);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent var(--primary-color-light) transparent;
 }
 
 /* Table */
